@@ -19,7 +19,7 @@ With $`n`$ we refer to the number of inputs into the algorithm.
    $`\displaystyle\sum_{i=0}^{n}2^i`$<br> 
    We set this formula to:<br>
    
-   $`\displaystyle\sum_{i=0}^{n}2^i=2^{n+1}-1`$
+   $`\displaystyle\sum_{i=0}^{n}2^i=2^{n+1}-1`$ (*)
 
    and proof it next, by induction.
    
