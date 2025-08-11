@@ -23,9 +23,14 @@ With $`n`$ we refer to the number of inputs into the algorithm.
 
    and proof it next, by induction.
    
-4. (START) $`n=0`$ gives $`2^{0}=1=2^{0+1}-1=2^{1}-1=1`$  <br>
-   (ASSUMPTION) (A) holds therefore for general  $`n`$  <br>
-   (INDUCTION) Show that (A)  also holds for $`n`$ $`\rightarrow`$ $`n+1`$. We must now show that we fulfill  $`\displaystyle\sum_{i=0}^{n+1}2^i=2^{n+2}-1`$<br>
+3. (START) 
+    $`n=0`$ gives $`2^{0}=1=2^{0+1}-1=2^{1}-1=1`$
+
+   (ASSUMPTION)
+   By (START) holds (*), hence we assume it also holds for general $`n`$.
+   
+   (INDUCTION)
+   We show that (*) also holds for $`n`$ $`\rightarrow`$ $`n+1`$. We must now show that we fulfill  $`\displaystyle\sum_{i=0}^{n+1}2^i=2^{n+2}-1`$<br>
 Rewriting the sum we get  $`\displaystyle\sum_{i=0}^{n}2^i+2^{n+1}=2^{n+2}-1`$ and we know that for the left sum we can use  (A), hence we get <br>
  $`(2^{n+1}-1)+2^{n+1}=2^{n+2}-1`$ and now rearranging the left side hand we get $`2^{n+1}+2^{n+1}-1=2^{n+2}-1`$ which gives $`2*2^{n+1}-1=2^{n+2}-1`$ and finally
 $`2^{n+1}-1=2^{n+2}-1`$ to proof that (A) holds.<br><br>
