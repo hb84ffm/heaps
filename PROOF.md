@@ -34,7 +34,7 @@ With $`n`$ we refer to the number of inputs into the algorithm.
    $`\displaystyle\sum_{i=0}^{n+1}2^i=2^{n+2}-1`$<br>
    
    Rewriting the sum we get<br>
-   $`\displaystyle\sum_{i=0}^{n}2^i+2^{n+1}=2^{n+2}-1`$<br>
+   $`\displaystyle\sum_{i=0}^{n}2^i+2^{n+1}=2^{n+2}-1`$<br><br>
    and we know that for the left sum we can use (1), hence we get<br>
    $`(2^{n+1}-1)+2^{n+1}=2^{n+2}-1`$<br>
    
