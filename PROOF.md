@@ -20,9 +20,9 @@ We prove this by:
    - `i = n` → `2^n` nodes
 2. The sum over all levels is:
 
-   \[
+   `\[
    \sum_{i=0}^{n} 2^i
-   \]
+   \]`
 
    By the geometric sum formula:
 
