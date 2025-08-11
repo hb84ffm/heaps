@@ -59,10 +59,10 @@ Now to find height $`i`$ in terms of $`n`$ input's we write<br>
 which gives<br>
    $`n+1=2^{i+1}`$<br>
    
-applying the logarithm yields<br>
+then applying the logarithm yields<br>
    $`i=\frac{1}{log(2)}*log(n+1)-1`$<br>
 
-now ignoring constants as<br>
+now by ignoring constants as<br>
    $`\frac{1}{log(2)}`$, $`1`$ and $`-1`$<br>
 
-we can say that $`i`$ is as of $`O(log(n))`$. 
+we see that $`i`$ is as of $`O(log(n))`$. 
