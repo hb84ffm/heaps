@@ -14,9 +14,10 @@ With $`n`$ we refer to the number of inputs into the algorithm.
    $`i=1`$ with $`2^{1}=2`$ nodes <br>
    $`...`$ <br>
    $`i=n`$ with $`2^{n}`$ nodes <br>
-2. If we now would balance the worst case path (root to leave), we would must sum all possible levels given by $`\displaystyle\sum_{i=0}^{n}2^i`$.<br> 
+2. If we balance the worst case path (root to leave) we must sum all possible levels given by<br>
+   $`\displaystyle\sum_{i=0}^{n}2^i`$.<br> 
 We flag this formula by (A) $`\displaystyle\sum_{i=0}^{n}2^i=2^{n+1}-1`$ and will proof it next by induction.
-3. (START) $`n=0`$ gives $`2^{0}=1=2^{0+1}-1=2^{1}-1=1`$  <br>
+4. (START) $`n=0`$ gives $`2^{0}=1=2^{0+1}-1=2^{1}-1=1`$  <br>
    (ASSUMPTION) (A) holds therefore for general  $`n`$  <br>
    (INDUCTION) Show that (A)  also holds for $`n`$ $`\rightarrow`$ $`n+1`$. We must now show that we fulfill  $`\displaystyle\sum_{i=0}^{n+1}2^i=2^{n+2}-1`$<br>
 Rewriting the sum we get  $`\displaystyle\sum_{i=0}^{n}2^i+2^{n+1}=2^{n+2}-1`$ and we know that for the left sum we can use  (A), hence we get <br>
