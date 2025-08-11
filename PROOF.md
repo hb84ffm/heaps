@@ -1,15 +1,14 @@
 # Proof that heap runtime is of $`O(log(n))`$ <br>
 
 A heap (balanced binary tree) is a tree that carries for each parent (node) a maximum of  $`2`$ children, while last level always occurs without children and is called leave.The runtime boundary for such a heap is in worst case $`O(log(n))`$.<br><br>
-We give a short proof sketchfor this, by:
+We give a short proof sketchfor this by:
 
-   (a) deriving the general formula of such a "worst case" balancing operation (root to leave!)  
-   (b) show that the formula has a boundary of $`O(log(n))`$.<br>
+(a) deriving the general formula of such a "worst case" balancing operation (root to leave!)  
+(b) show that the formula has a boundary of $`O(log(n))`$.<br>
 
-We state that $`n`$ is the number of inputs to the algorithm.
+With $`n`$ we refer to the number of inputs into the algorithm.
 
-
-(a) Derive general formula
+(a) Derive the general formula
 1. Assuming the tree has $`n+1`$ nodes ($`i=0,...,n`$), given by <br><br>
    $`i=0`$ with $`2^{0}=1`$ node <br>
     $`i=1`$ with $`2^{1}=2`$ nodes <br>
