@@ -46,7 +46,8 @@ With $`n`$ we refer to the number of inputs into the algorithm.
    to proof that (1) holds.<br><br>
 
 ##  (b) Derive $`O(log(n))`$ 
-1. Assuming  $`n>0`$ to not proof a trivial case and avoiding  $`log(0)`$ expression.  
-2. We now know that each $`n`$ node binary tree has a worst case balancing of $`2^{n+1}-1`$. <br>
-3. Now to find height  $`i`$ in terms of $`n`$ input's we write $`n=2^{i+1}-1`$  which gives  $`n+1=2^{i+1}`$, applying logarithm gives<br>
+We assume  $`n>0`$ to not proof a trivial case and avoid the term   $`log(0)`$.<br>  
+We now know that each $`n`$ node binary tree has a worst case balancing of<br>
+   $`2^{n+1}-1`$<br>
+Now to find height  $`i`$ in terms of $`n`$ input's we write $`n=2^{i+1}-1`$  which gives  $`n+1=2^{i+1}`$, applying logarithm gives<br>
 $`i=\frac{1}{log(2)}*log(n+1)-1`$ now ignoring constants $`\frac{1}{log(2)}`$, $`1`$ and $`-1`$ we can say that $`i`$ is as of $`O(log(n))`$ 
