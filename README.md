@@ -1,8 +1,7 @@
 # A streamlit app to iteratively calculate median values  
 
 ## Description 
-This project implements a simple streamlit app allowing the user to iteratively create integer values, add them to a list and calculate for each iteration the median. 
-This apps aims to minizime runtime when computing the median, using commands provided by heapq package   
+This project implements a simple streamlit app allowing the user to iteratively create integer values, add them to a list and calculate for each iteration the median. This apps aims to minizime runtime when computing the median, using commands provided by heapq package.   
 
 ## Features 1. 
 1. Interactive UI to create integers and send these to an backend that runs the calculation 
