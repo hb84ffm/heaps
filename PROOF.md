@@ -19,21 +19,31 @@ With $`n`$ we refer to the number of inputs into the algorithm.
    $`\displaystyle\sum_{i=0}^{n}2^i`$<br> 
    We set this formula to:<br>
    
-   $`\displaystyle\sum_{i=0}^{n}2^i=2^{n+1}-1`$ (*)
+   $`\displaystyle\sum_{i=0}^{n}2^i=2^{n+1}-1`$ (1)
 
    and proof it next, by induction.
    
-3. (START) 
+3. (START)<br> 
     $`n=0`$ gives $`2^{0}=1=2^{0+1}-1=2^{1}-1=1`$
 
    (ASSUMPTION)<br>
-   By (START) holds (*), hence we assume it also holds for general $`n`$.
+   By (START) holds (1), hence we assume it also holds for general $`n`$.
    
-   (INDUCTION)
-   We show that (*) also holds for $`n`$ $`\rightarrow`$ $`n+1`$. We must now show that we fulfill  $`\displaystyle\sum_{i=0}^{n+1}2^i=2^{n+2}-1`$<br>
-Rewriting the sum we get  $`\displaystyle\sum_{i=0}^{n}2^i+2^{n+1}=2^{n+2}-1`$ and we know that for the left sum we can use  (A), hence we get <br>
- $`(2^{n+1}-1)+2^{n+1}=2^{n+2}-1`$ and now rearranging the left side hand we get $`2^{n+1}+2^{n+1}-1=2^{n+2}-1`$ which gives $`2*2^{n+1}-1=2^{n+2}-1`$ and finally
-$`2^{n+1}-1=2^{n+2}-1`$ to proof that (A) holds.<br><br>
+   (INDUCTION)<br>
+   We show that (1) also holds for $`n`$ $`\rightarrow`$ $`n+1`$.<br>
+   We must now show that we fulfill<br>
+   $`\displaystyle\sum_{i=0}^{n+1}2^i=2^{n+2}-1`$<br>
+   Rewriting the sum we get<br>
+   $`\displaystyle\sum_{i=0}^{n}2^i+2^{n+1}=2^{n+2}-1`$<br>
+   and we know that for the left sum we can use (1), hence we get<br>
+   $`(2^{n+1}-1)+2^{n+1}=2^{n+2}-1`$<br>
+   now rearranging left side hand we get<br>
+   $`2^{n+1}+2^{n+1}-1=2^{n+2}-1`$<br>
+   which gives<br>
+   $`2*2^{n+1}-1=2^{n+2}-1`$<br>
+   and finally<br>
+   $`2^{n+1}-1=2^{n+2}-1`$<br>
+   to proof that (1) holds.<br><br>
 
 (b) Derive $`O(log(n))`$ 
 1. Assuming  $`n>0`$ to not proof a trivial case and avoiding  $`log(0)`$ expression.  
