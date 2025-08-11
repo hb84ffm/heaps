@@ -26,7 +26,7 @@ With $`n`$ we refer to the number of inputs into the algorithm.
 3. (START) 
     $`n=0`$ gives $`2^{0}=1=2^{0+1}-1=2^{1}-1=1`$
 
-   (ASSUMPTION)
+   (ASSUMPTION)<br>
    By (START) holds (*), hence we assume it also holds for general $`n`$.
    
    (INDUCTION)
