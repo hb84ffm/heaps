@@ -1,71 +1,28 @@
-# Proof that heap runtime is O(log n)
+# Proof that heap runtime is of $`O(log(n))`$ <br>
 
-A heap (balanced binary tree) is a tree where each parent node has at most two children.  
-The last level always contains the leaves (no children).
+A heap (balanced binary tree) is a tree that has for each parent (node) a maximum of  $`2`$ children, while the last level always occurs without children and is called leaves.<br> 
+The runtime boundary for such a heap is in worst case $`O(log(n))`$.
+We will proof this by (a) deriving the general formula of such a "worst case" balancing operation (root to leave!) and (b) show that the formula has a boundary of $`O(log(n))`$.<br>
+We state that $`n`$ is the number of inputs to the algorithm.
 
-The worst‑case runtime for a heap operation is `O(log n)`.  
-We prove this by:
 
-1. Deriving a general formula for the *maximum* balancing path (root to leaf) — part (a)
-2. Showing that the formula grows in `O(log n)` — part (b)
+(a) Derive general formula
+1. Assuming the tree has $`n+1`$ nodes ($`i=0,...,n`$), given by <br><br>
+   $`i=0`$ with $`2^{0}=1`$ node <br>
+    $`i=1`$ with $`2^{1}=2`$ nodes <br>
+    $`...`$ <br>
+    $`i=n`$ with $`2^{n}`$ nodes <br>
+2. If we now would balance the worst case path (root to leave), we would must sum all possible levels given by $`\displaystyle\sum_{i=0}^{n}2^i`$.<br> 
+We flag this formula by (A) $`\displaystyle\sum_{i=0}^{n}2^i=2^{n+1}-1`$ and will proof it next by induction.
+3. (START) $`n=0`$ gives $`2^{0}=1=2^{0+1}-1=2^{1}-1=1`$  <br>
+   (ASSUMPTION) (A) holds therefore for general  $`n`$  <br>
+   (INDUCTION) Show that (A)  also holds for $`n`$ $`\rightarrow`$ $`n+1`$. We must now show that we fulfill  $`\displaystyle\sum_{i=0}^{n+1}2^i=2^{n+2}-1`$<br>
+Rewriting the sum we get  $`\displaystyle\sum_{i=0}^{n}2^i+2^{n+1}=2^{n+2}-1`$ and we know that for the left sum we can use  (A), hence we get <br>
+ $`(2^{n+1}-1)+2^{n+1}=2^{n+2}-1`$ and now rearranging the left side hand we get $`2^{n+1}+2^{n+1}-1=2^{n+2}-1`$ which gives $`2*2^{n+1}-1=2^{n+2}-1`$ and finally
+$`2^{n+1}-1=2^{n+2}-1`$ to proof that (A) holds.<br><br>
 
----
-
-## (a) Derive the general formula
-
-1. Suppose the tree has `n+1` nodes (`i = 0, …, n`), with:
-   - `i = 0` → `2^0 = 1` node
-   - `i = 1` → `2^1 = 2` nodes  
-     …  
-   - `i = n` → `2^n` nodes
-2. The sum over all levels is:
-
-   `\[
-   \sum_{i=0}^{n} 2^i
-   \]`
-
-   By the geometric sum formula:
-
-   \[
-   \sum_{i=0}^{n} 2^i = 2^{n+1} - 1
-   \]
-3. **Proof by induction**:  
-   - Base case: `n = 0` → `2^1 - 1 = 1` ✓  
-   - Assume true for `n`, prove for `n+1`:
-
-     \[
-     \sum_{i=0}^{n+1} 2^i = \left( \sum_{i=0}^{n} 2^i \right) + 2^{n+1}
-     \]
-     Using the induction assumption:
-
-     \[
-     (2^{n+1} - 1) + 2^{n+1} = 2^{n+2} - 1
-     \]
-     ✓ QED.
-
----
-
-## (b) Show O(log n) growth
-
-1. In the worst case, heap balancing visits the full height:
-
-   \[
-   n = 2^{i+1} - 1 \quad\Rightarrow\quad n+1 = 2^{i+1}
-   \]
-
-2. Applying log base 2:
-
-   \[
-   i+1 = \log_2(n+1)
-   \]
-   \[
-   i = \log_2(n+1) - 1
-   \]
-
-3. Ignoring constants, the height `i` is in:
-
-   \[
-   O(\log n)
-   \]
-
-Thus, heap operations like `appendNum()` run in `O(log n)` in the worst case.
+(b) Derive $`O(log(n))`$ 
+1. Assuming  $`n>0`$ to not proof a trivial case and avoiding  $`log(0)`$ expression.  
+2. We now know that each $`n`$ node binary tree has a worst case balancing of $`2^{n+1}-1`$. <br>
+3. Now to find height  $`i`$ in terms of $`n`$ input's we write $`n=2^{i+1}-1`$  which gives  $`n+1=2^{i+1}`$, applying logarithm gives<br>
+$`i=\frac{1}{log(2)}*log(n+1)-1`$ now ignoring constants $`\frac{1}{log(2)}`$, $`1`$ and $`-1`$ we can say that $`i`$ is as of $`O(log(n))`$ 
