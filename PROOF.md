@@ -8,7 +8,7 @@ We give a short proof sketchfor this by:
 
 With $`n`$ we refer to the number of inputs into the algorithm.
 
-(a) Derive the general formula
+## (a) Derive the general formula
 1. Assuming the tree has $`n+1`$ nodes ($`i=0,...,n`$), given by <br><br>
    $`i=0`$ with $`2^{0}=1`$ node <br>
    $`i=1`$ with $`2^{1}=2`$ nodes <br>
@@ -45,7 +45,7 @@ With $`n`$ we refer to the number of inputs into the algorithm.
    $`2^{n+1}-1=2^{n+2}-1`$<br>
    to proof that (1) holds.<br><br>
 
-(b) Derive $`O(log(n))`$ 
+##  (b) Derive $`O(log(n))`$ 
 1. Assuming  $`n>0`$ to not proof a trivial case and avoiding  $`log(0)`$ expression.  
 2. We now know that each $`n`$ node binary tree has a worst case balancing of $`2^{n+1}-1`$. <br>
 3. Now to find height  $`i`$ in terms of $`n`$ input's we write $`n=2^{i+1}-1`$  which gives  $`n+1=2^{i+1}`$, applying logarithm gives<br>
